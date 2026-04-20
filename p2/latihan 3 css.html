@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Latihan Semantic HTML - Portal Berita Kampus</title>
+ <style>
+ * {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+ }
+ body {
+ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+ background-color: #f5f5f5;
+ line-height: 1.6;
+ }
+
+ /* Header */
+ header {
+ background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+ color: white;
+ padding: 20px 40px;
+ text-align: center;
+ }
+ header h1 {
+ font-size: 32px;
+ margin-bottom: 10px;
+ }
+ header p {
+ color: #ccc;
+ }
+
+ /* Navigasi */
+ nav {
+ background-color: #0f3460;
+ padding: 12px 40px;
+ position: sticky;
+ top: 0;
+ z-index: 100;
+ }
+ nav ul {
+ list-style: none;
+ display: flex;
+ gap: 30px;
+ flex-wrap: wrap;
+ }
+ nav a {
+ color: white;
+ text-decoration: none;
+ font-weight: bold;
+ transition: color 0.3s;
+ }
+ nav a:hover {
+ color: #e94560;
+ }
+
+ /* Container utama */
+ .container {
+ display: flex;
+ max-width: 1200px;
+ margin: 30px auto;
+ padding: 0 20px;
+ gap: 30px;
+ }
+
+ /* Main Content */
+ main {
+ flex: 3;
+ }
+
+ /* Article */
+ article {
+ background: white;
+ border-radius: 10px;
+ padding: 25px;
+ margin-bottom: 25px;
+ box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+ }
+ article h2 {
+ color: #1a1a2e;
+ margin-bottom: 10px;
+ }
+ article .meta {
+ color: #888;
+ font-size: 14px;
+ margin-bottom: 15px;
+ display: flex;
+ gap: 15px;
+ }
+ article time {
+ font-style: italic;
+ }
+ article img {
+ width: 100%;
+ border-radius: 8px;
+ margin: 15px 0;
+ }
+ article .read-more {
+ display: inline-block;
+ margin-top: 15px;
+ color: #e94560;
+ text-decoration: none;
+ font-weight: bold;
+ }
+
+ /* Section */
+ section {
+ background: white;
+ border-radius: 10px;
+ padding: 20px;
+ margin-bottom: 25px;
+ box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+ }
+ section h3 {
+ color: #1a1a2e;
+ margin-bottom: 15px;
+ border-left: 4px solid #e94560;
+ padding-left: 12px;
+ }
+
+ /* Aside (Sidebar) */
+ aside {
+ flex: 1;
+ }
+ .sidebar-card {
+ background: white;
+ border-radius: 10px;
+ padding: 20px;
+ margin-bottom: 25px;
+ box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+ }
+ .sidebar-card h3 {
+ color: #1a1a2e;
+ margin-bottom: 15px;
+ border-bottom: 2px solid #e94560;
+ padding-bottom: 8px;
+ }
+ .sidebar-card ul {
+ list-style: none;
+ }
+ .sidebar-card li {
+ margin-bottom: 10px;
+ padding-bottom: 10px;
+ border-bottom: 1px solid #eee;
+ }
+ .sidebar-card a {
+ text-decoration: none;
+ color: #333;
+ }
+ .sidebar-card a:hover {
+ color: #e94560;
+ }
+
+ /* Figure */
+ figure {
+ margin: 15px 0;
+ }
+ figcaption {
+ font-size: 12px;
+ color: #888;
+ text-align: center;
+ margin-top: 5px;
+ }
+
+ /* Footer */
+ footer {
+ background-color: #1a1a2e;
+ color: white;
+ text-align: center;
+ padding: 30px;
+ margin-top: 30px;
+ }
+ footer .footer-content {
+ max-width: 1200px;
+ margin: 0 auto;
+ display: flex;
+ justify-content: space-between;
+ flex-wrap: wrap;
+ gap: 20px;
+ }
+ footer .footer-section {
+ flex: 1;
+ min-width: 200px;
+ }
+ footer h4 {
+ margin-bottom: 15px;
+ color: #e94560;
+ }
+ footer a {
+ color: #ccc;
+ text-decoration: none;
+ }
+ footer a:hover {
+ color: white;
+ }
+ .copyright {
+ margin-top: 20px;
+ padding-top: 20px;
+ border-top: 1px solid #333;
+ font-size: 14px;
+ }
+
+ @media (max-width: 768px) {
+ .container {
+ flex-direction: column;
+ }
+ nav ul {
+ flex-direction: column;
+ gap: 10px;
+ }
+ }
+ </style>
+</head>
+<body>
+ <!-- Header: Kepala halaman -->
+ <header>
+ <h1>📰 PORTAL BERITA KAMPUS</h1>
+ <p>Informasi Terkini Seputar Kampus dan Dunia Pendidikan</p>
+ </header>
+ <!-- Nav: Navigasi utama -->
+ <nav>
+ <ul>
+ <li><a href="#">🏠 Beranda</a></li>
+ <li><a href="#">📢 Berita Terbaru</a></li>
+ <li><a href="#">🎓 Akademik</a></li>
+ <li><a href="#">⚡ Event</a></li>
+ <li><a href="#">💼 Karir</a></li>
+ <li><a href="#">📞 Kontak</a></li>
+ </ul>
+ </nav>
+ <!-- Container: Main + Aside -->
+ <div class="container">
+ <!-- Main: Konten utama -->
+ <main>
+ <!-- Article 1: Artikel independen -->
+ <article>
+ <h2>Workshop Full-Stack Development dengan React & NestJS</h2>
+ <div class="meta">
+ <span>👤 Oleh: Tim Humas</span>
+ <time datetime="2026-04-15">📅 15 April 2026</time>
+ <span>🏷️ Kategori: Workshop</span>
+ </div>
+ <figure>
+ <img src="https://placehold.co/800x400/e94560/white?text=Workshop+Full-Stack"
+alt="Workshop Full-Stack">
+ <figcaption>Suasana Workshop Full-Stack Development di Lab Komputer</figcaption>
+ </figure>
+ <p>Program Studi Informatika Universitas Amikom Yogyakarta menyelenggarakan Workshop
+Full-Stack Development yang membahas tentang pengembangan aplikasi web modern menggunakan React
+untuk frontend dan NestJS untuk backend. Workshop ini diikuti oleh 100 peserta dari berbagai
+semester.</p>
+ <p>Peserta diajarkan mulai dari setup lingkungan pengembangan, pembuatan REST API,
+integrasi dengan MongoDB Atlas, hingga deployment aplikasi ke production. Workshop berlangsung
+selama 2 hari secara hybrid (luring dan daring).</p>
+ <a href="#" class="read-more">Baca selengkapnya →</a>
+ </article>
+ <!-- Article 2 -->
+ <article>
+ <h2>Penerimaan Mahasiswa Baru Tahun Akademik 2026/2027 Dibuka</h2>
+ <div class="meta">
+ <span>👤 Oleh: Humas Amikom</span>
+ <time datetime="2026-04-10">📅 10 April 2026</time>
+ <span>🏷️ Kategori: Pendaftaran</span>
+ </div>
+ <p>Universitas Amikom Yogyakarta resmi membuka pendaftaran mahasiswa baru untuk
+tahun akademik 2026/2027. Pendaftaran dibuka mulai 1 Mei hingga 31 Agustus 2026. Tersedia berbagai
+jalur pendaftaran seperti SNBP, SNBT, dan Jalur Mandiri.</p>
+ <p>Bagi calon mahasiswa yang berminat, dapat mengakses portal pendaftaran di <a
+href="#">pmb.amikom.ac.id</a> untuk informasi lebih lanjut.</p>
+ <a href="#" class="read-more">Baca selengkapnya →</a>
+ </article>
+ <!-- Section: Bagian pengumuman -->
+ <section>
+ <h3>📢 Pengumuman Penting</h3>
+ <ul>
+ <li>✅ Ujian Tengah Semester (UTS) dilaksanakan pada 20-30 April 2026</li>
+ <li>✅ Batas akhir pengumpulan tugas akhir untuk mahasiswa semester akhir: 25
+Mei 2026</li>
+ <li>✅ Libur Hari Raya: 1-10 Mei 2026</li>
+ <li>✅ Registrasi ulang KRS online: 15-20 Juni 2026</li>
+ </ul>
+ </section>
+ <!-- Section: Bagian galeri -->
+ <section>
+ <h3>🎥 Galeri Kegiatan Terbaru</h3>
+ <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+ <figure style="flex: 1;">
+ <img src="https://placehold.co/200x150/3498db/white?text=Semnas"
+alt="Seminar Nasional" width="100%">
+ <figcaption>Seminar Nasional</figcaption>
+ </figure>
+<figure style="flex: 1;">
+ <img src="https://placehold.co/200x150/e74c3c/white?text=Hackathon"
+alt="Hackathon" width="100%">
+ <figcaption>Hackathon 2026</figcaption>
+ </figure>
+<figure style="flex: 1;">
+ <img src="https://placehold.co/200x150/2ecc71/white?text=Webinar"
+alt="Webinar" width="100%">
+ <figcaption>Webinar Internasional</figcaption>
+ </figure>
+ </div>
+ </section>
+ </main>
+ <!-- Aside: Konten sampingan (sidebar) -->
+ <aside>
+ <div class="sidebar-card">
+ <h3>🔍 Cari Artikel</h3>
+ <input type="search" placeholder="Cari berita..." style="width: 100%; padding: 10px;
+border: 1px solid #ddd; border-radius: 5px;">
+ </div>
+ <div class="sidebar-card">
+ <h3>📌 Berita Populer</h3>
+ <ul>
+ <li><a href="#">Workshop AI untuk Pemula</a></li>
+ <li><a href="#">Beasiswa Unggulan 2026 Dibuka</a></li>
+ <li><a href="#">Kunjungan Industri ke Startup Lokal</a></li>
+ <li><a href="#">Pelatihan TOEFL Gratis</a></li>
+ <li><a href="#">Lomba Cepat Tepat Pemrograman</a></li>
+ </ul>
+ </div>
+ <div class="sidebar-card">
+ <h3>📅 Agenda Mendatang</h3>
+ <ul>
+ <li>🎯 20 April: UTS Hari ke-1</li>
+ <li>🎯 25 April: Deadline Submission Lomba Web</li>
+ <li>🎯 1 Mei: Libur Hari Buruh</li>
+ <li>🎯 10 Mei: Pengumuman Peserta Lolos</li>
+ </ul>
+ </div>
+ <div class="sidebar-card">
+ <h3>📱 Ikuti Kami</h3>
+ <ul>
+ <li><a href="#">📘 Facebook</a></li>
+ <li><a href="#">📷 Instagram</a></li>
+ <li><a href="#">🐦 Twitter</a></li>
+ <li><a href="#">💬 LinkedIn</a></li>
+ <li><a href="#">🎵 TikTok</a></li>
+ </ul>
+ </div>
+ </aside>
+ </div>
+ <!-- Footer: Kaki halaman -->
+ <footer>
+ <div class="footer-content">
+ <div class="footer-section">
+ <h4>Portal Berita Kampus</h4>
+ <p>Menyajikan berita terpercaya seputar kegiatan akademik, kemahasiswaan, dan event
+kampus.</p>
+ </div>
+ <div class="footer-section">
+ <h4>Kontak</h4>
+ <p>📞 (0274) 1234567</p>
+ <p>✉️ info@portalberita.ac.id</p>
+ <p>📍 Jl. Ring Road Utara, Condong Catur, Sleman, Yogyakarta</p>
+ </div>
+ <div class="footer-section">
+ <h4>Link Terkait</h4>
+ <ul style="list-style: none;">
+ <li><a href="#">Tentang Kami</a></li>
+ <li><a href="#">Kebijakan Privasi</a></li>
+ <li><a href="#">Karir</a></li>
+ <li><a href="#">FAQ</a></li>
+ </ul>
+ </div>
+ </div>
+ <div class="copyright">
+ <p>© 2026 Portal Berita Kampus. All Rights Reserved.</p>
+ <p>Dibangun dengan Semantic HTML5 untuk aksesibilitas dan SEO yang lebih baik</p>
+ </div>
+ </footer>
+</body>
+</html>

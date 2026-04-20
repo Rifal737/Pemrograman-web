@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Latihan Form - Berbagai Tipe Input</title>
+ <style>
+ * {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+ }
+ body {
+ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+ background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+ padding: 40px 20px;
+ }
+ .container {
+ max-width: 800px;
+ margin: 0 auto;
+ background: white;
+ border-radius: 15px;
+ box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+ overflow: hidden;
+ }
+ .header {
+ background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+ color: white;
+ padding: 30px;
+ text-align: center;
+ }
+ .header h1 {
+ font-size: 28px;
+ margin-bottom: 10px;
+ }
+ .form-container {
+ padding: 30px;
+ }
+ .form-group {
+ margin-bottom: 20px;
+ }
+ label {
+ display: block;
+ font-weight: bold;
+ margin-bottom: 8px;
+ color: #333;
+ }
+ input, select, textarea {
+ width: 100%;
+ padding: 12px;
+ border: 1px solid #ddd;
+ border-radius: 8px;
+ font-size: 14px;
+ transition: border-color 0.3s;
+ }
+ input:focus, select:focus, textarea:focus {
+ outline: none;
+ border-color: #667eea;
+ box-shadow: 0 0 5px rgba(102,126,234,0.3);
+ }
+ .radio-group, .checkbox-group {
+ display: flex;
+ gap: 20px;
+ flex-wrap: wrap;
+ }
+ .radio-group label, .checkbox-group label {
+ display: inline-flex;
+ align-items: center;
+ gap: 8px;
+ font-weight: normal;
+ }
+ .radio-group input, .checkbox-group input {
+ width: auto;
+ }
+ .row-2cols {
+ display: grid;
+ grid-template-columns: 1fr 1fr;
+ gap: 20px;
+ }
+ button {
+ background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+ color: white;
+ border: none;
+ padding: 14px 30px;
+ font-size: 16px;
+ font-weight: bold;
+ border-radius: 8px;
+ cursor: pointer;
+ transition: transform 0.2s;
+ }
+ button:hover {
+ transform: translateY(-2px);
+ }
+ .button-group {
+ display: flex;
+ gap: 15px;
+ margin-top: 20px;
+ }
+ .btn-reset {
+ background: #95a5a6;
+ }
+ hr {
+ margin: 20px 0;
+ border: none;
+ border-top: 1px solid #eee;
+ }
+ .note {
+ background: #f8f9fa;
+ padding: 15px;
+ border-radius: 8px;
+ font-size: 14px;
+ color: #666;
+ margin-top: 20px;
+ }
+ </style>
+</head>
+<body>
+ <div class="container">
+ <div class="header">
+ <h1>📝 Formulir Pendaftaran Mahasiswa Baru</h1>
+ <p>Isi data diri Anda dengan lengkap dan benar</p>
+ </div>
+
+ <div class="form-container">
+ <form action="#" method="post" onsubmit="alert('Form telah dikirim!'); return false;">
+
+ <!-- Data Diri -->
+ <h3 style="margin-bottom: 15px; color: #667eea;">📋 Data Diri</h3>
+
+ <div class="row-2cols">
+ <div class="form-group">
+ <label>Nama Lengkap *</label>
+<input type="text" name="nama" placeholder="Contoh: Ahmad Fauzi" required>
+ </div>
+<div class="form-group">
+ <label>NIM *</label>
+<input type="text" name="nim" placeholder="22.12.1234"
+pattern="\d{2}\.\d{2}\.\d{4}" title="Format: 22.12.1234" required>
+ </div>
+ </div>
+ <div class="row-2cols">
+ <div class="form-group">
+ <label>Email *</label>
+<input type="email" name="email" placeholder="contoh@email.com" required>
+ </div>
+ <div class="form-group">
+ <label>Nomor Telepon</label>
+<input type="tel" name="telpon" placeholder="08123456789">
+ </div>
+ </div>
+ <div class="row-2cols">
+ <div class="form-group">
+ <label>Tanggal Lahir *</label>
+<input type="date" name="tanggal_lahir" required>
+ </div>
+<div class="form-group">
+ <label>Usia</label>
+<input type="number" name="usia" min="17" max="60" placeholder="17-60
+tahun">
+ </div>
+ </div>
+ <div class="form-group">
+ <label>Jenis Kelamin *</label>
+<div class="radio-group">
+ <label><input type="radio" name="gender" value="laki-laki" required> 👨
+Laki-laki</label>
+ <label><input type="radio" name="gender" value="perempuan"> 👩
+Perempuan</label>
+ </div>
+ </div>
+ <div class="form-group">
+ <label>Alamat Lengkap</label>
+<textarea name="alamat" rows="3" placeholder="Jl. Ring Road Utara, Condong
+Catur, Sleman, Yogyakarta"></textarea>
+ </div>
+ <hr>
+ <!-- Data Akademik -->
+ <h3 style="margin-bottom: 15px; color: #667eea;">🎓 Data Akademik</h3>
+ <div class="row-2cols">
+ <div class="form-group">
+ <label>Program Studi *</label>
+<select name="prodi" required>
+ <option value="">-- Pilih Program Studi --</option>
+ <option value="informatika">Informatika (S1)</option>
+ <option value="sistem_informasi">Sistem Informasi (S1)</option>
+ <option value="teknik_komputer">Teknik Komputer (S1)</option>
+ </select>
+ </div>
+<div class="form-group">
+ <label>Semester</label>
+<input type="range" name="semester" min="1" max="8" value="4"
+oninput="this.nextElementSibling.value = this.value">
+ <output style="display: inline-block; margin-left: 10px;">4</output>
+ </div>
+ </div>
+ <div class="form-group">
+ <label>Peminatan (minimal pilih 1)</label>
+<div class="checkbox-group">
+ <label><input type="checkbox" name="minat" value="web"> 💻 Web
+Development</label>
+ <label><input type="checkbox" name="minat" value="mobile"> 📱 Mobile
+Development</label>
+ <label><input type="checkbox" name="minat" value="data"> 📊 Data
+Science</label>
+ <label><input type="checkbox" name="minat" value="ai"> 🤖 AI & Machine
+Learning</label>
+ <label><input type="checkbox" name="minat" value="game"> 🎮 Game
+Development</label>
+ </div>
+ </div>
+ <hr>
+ <!-- Informasi Tambahan -->
+ <h3 style="margin-bottom: 15px; color: #667eea;">⚙️ Informasi Tambahan</h3>
+ <div class="row-2cols">
+ <div class="form-group">
+ <label>Waktu Kuliah Favorit</label>
+<input type="time" name="waktu">
+ </div>
+<div class="form-group">
+ <label>Tanggal Mulai Kuliah</label>
+<input type="datetime-local" name="tanggal_mulai">
+ </div>
+ </div>
+ <div class="row-2cols">
+ <div class="form-group">
+ <label>Upload Foto (max 2MB)</label>
+ <input type="file" name="foto" accept="image/*">
+ </div>
+<div class="form-group">
+ <label>Pilih Warna Tema</label>
+<input type="color" name="warna" value="#667eea">
+ </div>
+ </div>
+ <div class="form-group">
+ <label>Website / Portofolio</label>
+<input type="url" name="website" placeholder="https://portofolio-saya.com">
+ </div>
+ <div class="form-group">
+ <label>Kode Referral (6 digit)</label>
+<input type="text" name="referral" pattern="[A-Z0-9]{6}" placeholder="ABC123">
+ </div>
+ <div class="button-group">
+ <button type="submit">✅ Kirim Pendaftaran</button>
+ <button type="reset" class="btn-reset">🗑️ Reset Form</button>
+ </div>
+ <div class="note">
+ <strong>📌 Catatan:</strong> Tanda <span style="color: red;">*</span> wajib
+diisi. Data Anda akan kami jaga kerahasiaannya.
+ </div>
+ </form>
+ </div>
+ </div>
+</body>
+</html>

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Latihan Tabel - Colspan & Rowspan</title>
+ <style>
+ body {
+ font-family: Arial, sans-serif;
+ max-width: 900px;
+ margin: 0 auto;
+ padding: 20px;
+ background-color: #f0f0f0;
+ }
+ h1, h2 {
+ color: #2c3e50;
+ }
+ table {
+ width: 100%;
+ border-collapse: collapse;
+ margin-bottom: 20px;
+ background-color: white;
+ }
+ th, td {
+ border: 1px solid #ddd;
+ padding: 12px;
+ text-align: center;
+ }
+ th {
+ background-color: #3498db;
+ color: white;
+ }
+ .bg-blue {
+ background-color: #e3f2fd;
+ }
+ .bg-green {
+ background-color: #e8f5e9;
+ }
+ caption {
+ font-weight: bold;
+ margin-bottom: 10px;
+ font-size: 1.2em;
+ }
+ </style>
+</head>
+<body>
+ <h1>Latihan 1: Tabel HTML Lanjutan</h1>
+
+ <h2>Contoh 1: Jadwal Kuliah dengan Rowspan</h2>
+ <table>
+ <caption>Jadwal Kuliah Semester 4</caption>
+ <thead>
+ <tr>
+ <th>Hari</th>
+ <th>Jam</th>
+ <th>Mata Kuliah</th>
+ <th>Dosen</th>
+ <th>Ruang</th>
+ </tr>
+ </thead>
+ <tbody>
+ <!-- Baris dengan rowspan untuk hari Senin (3 baris) -->
+ <tr class="bg-blue">
+ <td rowspan="3">Senin</td>
+ <td>08:00 - 10:00</td>
+ <td>Pemrograman Web</td>
+ <td>Rifda Fatcha</td>
+ <td>Lab 301</td>
+ </tr>
+ <tr class="bg-blue">
+ <td>10:00 - 12:00</td>
+ <td>Basis Data</td>
+ <td>Arifiyanto</td>
+ <td>Lab 302</td>
+ </tr>
+ <tr class="bg-blue">
+ <td>13:00 - 15:00</td>
+ <td>UI/UX Design</td>
+ <td>Windha Mega</td>
+ <td>Lab 303</td>
+ </tr>
+
+ <!-- Baris dengan rowspan untuk hari Selasa (2 baris) -->
+ <tr class="bg-green">
+ <td rowspan="2">Selasa</td>
+ <td>09:00 - 11:00</td>
+ <td>Jaringan Komputer</td>
+ <td>Mujiyanto</td>
+ <td>Lab 304</td>
+ </tr>
+ <tr class="bg-green">
+ <td>13:00 - 15:00</td>
+ <td>Praktikum Web</td>
+ <td>Asisten Lab</td>
+ <td>Lab 301</td>
+ </tr>
+
+ <!-- Baris biasa untuk Rabu -->
+ <tr>
+ <td>Rabu</td>
+ <td>10:00 - 12:00</td>
+ <td>Manajemen Proyek</td>
+ <td>Yudha Riwanto</td>
+ <td>Ruang 201</td>
+ </tr>
+ </tbody>
+ </table>
+ <h2>Contoh 2: Nilai Mahasiswa dengan Colspan</h2>
+ <table>
+ <caption>Daftar Nilai Mahasiswa</caption>
+ <thead>
+ <tr>
+ <th rowspan="2">No</th>
+ <th rowspan="2">NIM</th>
+ <th rowspan="2">Nama</th>
+ <th colspan="3">Nilai</th>
+ <th rowspan="2">Rata-rata</th>
+ </tr>
+ <tr>
+ <th>Tugas</th>
+ <th>UTS</th>
+ <th>UAS</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td>1</td>
+ <td>22.12.1234</td>
+ <td>Budi Santoso</td>
+ <td>85</td>
+ <td>80</td>
+ <td>90</td>
+ <td>85</td>
+ </tr>
+ <tr>
+ <td>2</td>
+ <td>22.12.5678</td>
+ <td>Ani Wijaya</td>
+ <td>90</td>
+ <td>85</td>
+ <td>95</td>
+ <td>90</td>
+ </tr>
+ </tbody>
+ <tfoot>
+ <tr>
+ <td colspan="3"><strong>Rata-rata Kelas</strong></td>
+ <td>87.5</td>
+ <td>82.5</td>
+ <td>92.5</td>
+ <td>87.5</td>
+ </tr>
+ </tfoot>
+ </table>
+ <h2>Contoh 3: Struktur Organisasi (Colspan + Rowspan)</h2>
+ <table>
+ <caption>Struktur Organisasi Himpunan Mahasiswa</caption>
+ <thead>
+ <tr><th>Posisi</th><th>Nama</th><th>Departemen</th><th>Jabatan</th></tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td rowspan="4">Ketua</td>
+ <td rowspan="4">Ahmad Fauzi</td>
+ <td colspan="2" style="text-align: center;">Memimpin seluruh departemen</td>
+ </tr>
+ <tr>
+ <td>Departemen Akademik</td>
+ <td>Koordinator</td>
+ </tr>
+ <tr>
+ <td>Departemen Humas</td>
+ <td>Koordinator</td>
+ </tr>
+ <tr>
+ <td>Departemen Dana Usaha</td>
+ <td>Koordinator</td>
+ </tr>
+ </tbody>
+ </table>
+</body>
+</html>

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Dashboard Mahasiswa - Semantic HTML</title>
+ <style>
+ * {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+ }
+ body {
+ font-family: 'Segoe UI', sans-serif;
+ background-color: #f4f6f9;
+ }
+
+ /* Semantic Elements Styling */
+ header {
+ background: #2c3e50;
+ color: white;
+ padding: 20px;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ flex-wrap: wrap;
+ }
+
+ nav {
+ background: #34495e;
+ padding: 10px 20px;
+ }
+ nav ul {
+ display: flex;
+ list-style: none;
+ gap: 20px;
+ }
+ nav a {
+ color: white;
+ text-decoration: none;
+ }
+
+ .container {
+ display: flex;
+ max-width: 1200px;
+ margin: 20px auto;
+ padding: 0 20px;
+ gap: 20px;
+ }
+
+ main {
+ flex: 3;
+ }
+
+ aside {
+ flex: 1;
+ }
+
+ .card {
+ background: white;
+ border-radius: 8px;
+ padding: 20px;
+ margin-bottom: 20px;
+ box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+ }
+
+ table {
+ width: 100%;
+ border-collapse: collapse;
+ }
+ th, td {
+ border: 1px solid #ddd;
+ padding: 10px;
+ text-align: left;
+ }
+ th {
+ background: #3498db;
+ color: white;
+ }
+
+ input, select, textarea {
+ width: 100%;
+ padding: 8px;
+ margin-top: 5px;
+ border: 1px solid #ddd;
+ border-radius: 4px;
+ }
+
+ button {
+ background: #2c3e50;
+ color: white;
+ padding: 10px 20px;
+ border: none;
+ border-radius: 5px;
+ cursor: pointer;
+ }
+
+ footer {
+ background: #2c3e50;
+ color: white;
+ text-align: center;
+ padding: 15px;
+ margin-top: 20px;
+ }
+ </style>
+</head>
+<body>
+ <header>
+ <h1>🎓 Dashboard Mahasiswa</h1>
+ <div>Selamat datang, <strong>Ahmad Fauzi</strong> | <a href="#" style="color:
+white;">Logout</a></div>
+ </header>
+
+ <nav>
+ <ul>
+ <li><a href="#">🏠 Beranda</a></li>
+ <li><a href="#">📊 Nilai</a></li>
+ <li><a href="#">📅 Jadwal</a></li>
+ <li><a href="#">📝 Tugas</a></li>
+ <li><a href="#">⚙️ Pengaturan</a></li>
+ </ul>
+ </nav>
+
+ <div class="container">
+ <main>
+ <div class="card">
+ <h2>📊 Daftar Nilai Mahasiswa</h2>
+ <table>
+ <thead>
+ <tr><th>Mata
+Kuliah</th><th>SKS</th><th>Tugas</th><th>UTS</th><th>UAS</th><th>Nilai Akhir</th></tr>
+ </thead>
+<tbody>
+ <tr><td>Pemrograman
+Web</td><td>4</td><td>85</td><td>80</td><td>90</td><td>85</td></tr>
+ <tr><td>Basis
+Data</td><td>3</td><td>80</td><td>75</td><td>85</td><td>80</td></tr>
+ <tr><td>Jaringan
+Komputer</td><td>3</td><td>90</td><td>85</td><td>88</td><td>87</td></tr>
+ </tbody>
+<tfoot>
+ <tr style="background:#f0f0f0;"><td colspan="5"><strong>Ratarata</strong></td><td><strong>84</strong></td></tr>
+ </tfoot>
+ </table>
+ </div>
+
+ <div class="card">
+ <h2>📝 Form Pengajuan Tugas</h2>
+ <form>
+ <label>Judul Tugas:</label>
+<input type="text" placeholder="Masukkan judul tugas" required>
+
+<label>Mata Kuliah:</label>
+<select>
+ <option>Pemrograman Web</option><option>Basis Data</option><option>Jaringan
+Komputer</option>
+ </select>
+<label>Batas Pengumpulan:</label>
+<input type="date">
+
+<label>Deskripsi:</label>
+<textarea rows="3" placeholder="Jelaskan tugas Anda..."></textarea>
+
+<label>File Tugas:</label>
+<input type="file">
+
+ <button type="submit" style="margin-top: 15px;">📤 Kirim Tugas</button>
+ </form>
+ </div>
+ </main>
+
+ <aside>
+ <div class="card">
+ <h3>📅 Jadwal Hari Ini</h3>
+ <ul><li>08:00 - 10:00: Pemrograman Web</li><li>10:00 - 12:00: Basis
+Data</li><li>13:00 - 15:00: Praktikum</li></ul>
+ </div>
+ <div class="card">
+ <h3>📢 Pengumuman</h3>
+ <p>UTS dimulai 20 April 2026. Pastikan sudah mempersiapkan diri!</p>
+ </div>
+ </aside>
+ </div>
+
+ <footer>
+ <p>© 2026 - Dashboard Mahasiswa | Universitas Amikom Yogyakarta</p>
+ </footer>
+</body>
+</html>

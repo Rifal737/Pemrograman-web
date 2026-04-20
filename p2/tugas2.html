@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pendaftaran Lomba Pemrograman Web</title>
+
+<style>
+* {
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  margin: 0;
+  background-color: #f4f4f4;
+}
+
+header {
+  background-color: #2c3e50;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+nav {
+  background-color: #34495e;
+  padding: 10px;
+  text-align: center;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 15px;
+  font-weight: bold;
+}
+
+main {
+  width: 90%;
+  margin: 20px auto;
+}
+
+section {
+  background: white;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+}
+
+h2 {
+  color: #2c3e50;
+}
+
+/* TABLE */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+th, td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+}
+
+th {
+  background-color: #3498db;
+  color: white;
+}
+
+/* FORM */
+form label {
+  display: block;
+  margin-top: 12px;
+  font-weight: bold;
+}
+
+input, textarea, select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+}
+
+.radio-group, .checkbox-group {
+  margin-top: 8px;
+}
+
+.radio-group input,
+.checkbox-group input {
+  width: auto;
+}
+
+.btn-group {
+  margin-top: 20px;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  margin-right: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.submit-btn {
+  background-color: #27ae60;
+  color: white;
+}
+
+.reset-btn {
+  background-color: #e74c3c;
+  color: white;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  main {
+    width: 95%;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>🏆 Lomba Pemrograman Web 2026</h1>
+<p>Formulir Pendaftaran Peserta</p>
+</header>
+
+<nav>
+<a href="#">Beranda</a>
+<a href="#">Persyaratan</a>
+<a href="#">Pendaftaran</a>
+<a href="#">Kontak</a>
+</nav>
+
+<main>
+
+<section>
+<h2>📅 Jadwal Babak Lomba</h2>
+<table>
+<tr>
+<th rowspan="2">Babak</th>
+<th colspan="2">Tanggal & Waktu</th>
+<th rowspan="2">Keterangan</th>
+</tr>
+<tr>
+<th>Tanggal</th>
+<th>Jam</th>
+</tr>
+<tr>
+<td>Penyisihan</td>
+<td>20 Mei 2026</td>
+<td>08:00</td>
+<td>Online</td>
+</tr>
+<tr>
+<td>Semifinal</td>
+<td>25 Mei 2026</td>
+<td>09:00</td>
+<td>Lab Komputer</td>
+</tr>
+<tr>
+<td>Final</td>
+<td>30 Mei 2026</td>
+<td>10:00</td>
+<td>Auditorium</td>
+</tr>
+</table>
+</section>
+
+<section>
+<h2>📝 Formulir Pendaftaran</h2>
+
+<form>
+
+<label for="nama">Nama Lengkap *</label>
+<input type="text" id="nama" name="nama" required>
+
+<label for="nim">NIM *</label>
+<input type="text" id="nim" name="nim" pattern="[0-9]{10}" placeholder="10 digit angka" required>
+
+<label for="email">Email *</label>
+<input type="email" id="email" name="email" required>
+
+<label for="telp">Nomor Telepon</label>
+<input type="tel" id="telp" name="telp">
+
+<label for="tgl">Tanggal Lahir</label>
+<input type="date" id="tgl" name="tgl">
+
+<label>Jenis Kelamin</label>
+<div class="radio-group">
+  <input type="radio" id="laki" name="jk" value="L">
+  <label for="laki">Laki-laki</label>
+
+  <input type="radio" id="perempuan" name="jk" value="P">
+  <label for="perempuan">Perempuan</label>
+</div>
+
+<label>Bidang Lomba</label>
+<div class="checkbox-group">
+  <input type="checkbox" name="bidang" value="frontend"> Frontend
+  <input type="checkbox" name="bidang" value="backend"> Backend
+  <input type="checkbox" name="bidang" value="uiux"> UI/UX
+</div>
+
+<label for="ktm">Upload KTM</label>
+<input type="file" id="ktm" name="ktm">
+
+<label for="skill">Tingkat Kemampuan (1-10)</label>
+<input type="range" id="skill" name="skill" min="1" max="10">
+
+<label for="warna">Warna Favorit</label>
+<input type="color" id="warna" name="warna">
+
+<label for="alasan">Alasan Mengikuti Lomba</label>
+<textarea id="alasan" name="alasan" rows="4"></textarea>
+
+<div class="btn-group">
+<button type="submit" class="submit-btn">Kirim</button>
+<button type="reset" class="reset-btn">Reset</button>
+</div>
+
+</form>
+</section>
+
+</main>
+
+<footer>
+<p>© 2026 Panitia Lomba Pemrograman Web | Kontak:08123456789</p>
+</footer>
+
+</body>
+</html>
